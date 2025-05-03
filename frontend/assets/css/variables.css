@@ -1,0 +1,12 @@
+:root {
+    --black: #000000;
+    --textBlack: #363636;
+    --white: #ffffff;
+    --bodyBackground: #fffde8;
+    --bodyBackgroundGradient: #b4dbf5;  
+    --primary: #447ed3;
+    --focused: #0056b3;
+    --error: #e33737;
+    --red: #ee5d5d;
+    --redHover: #e73f3f;
+}
