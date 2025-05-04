@@ -1,19 +1,19 @@
+# Встановлюємо офіційний Node.js образ
 FROM node:18
 
-# Робоча директорія
+# Встановлюємо робочу директорію
 WORKDIR /app
 
-# Копіюємо файли
-COPY . .
-
-# Встановлюємо залежності
+# Копіюємо package файли та встановлюємо залежності
+COPY package*.json ./
 RUN npm install
 
-# Білд
+# Копіюємо весь проєкт
+COPY . .
+
+# Білд Nuxt (для SSR або статичного сайту)
 RUN npm run build
 
-# Відкриваємо порт
+# Запускаємо Nuxt у production режимі
 EXPOSE 3000
-
-# Запуск Nuxt сервера
-CMD ["npm", "run", "start"]
+CMD ["npm", "run", "preview"]
