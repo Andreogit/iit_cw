@@ -7,7 +7,7 @@ import type { User } from '~/models/user';
 export const useApi = () => {
 
   let isRefreshing = false;
-  const baseURL = 'http://localhost:3060'
+  const baseURL = 'http://backend:5000'
 
   const api = axios.create({
     baseURL,

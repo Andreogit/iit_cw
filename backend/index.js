@@ -6,7 +6,7 @@ const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
 const cors = require('cors');
 
-const PORT = 3060;
+const PORT = process.env.PORT || 5000;
 const app = express();
 const SECRET_KEY = 'secret_key';
 const db = new sqlite3.Database('./db/db.sqlite');
