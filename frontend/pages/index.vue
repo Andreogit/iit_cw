@@ -8,7 +8,8 @@ useSeoMeta({
     <div class="wrapper">
         <div class="content">
             <h1>{{ 'Student management system'.toUpperCase() }}</h1>
-            <NuxtImg src="/logo.png" loading="lazy" class="logo" />
+            <source srcset="~/assets/images/logo.png" type="image/png" />
+            <img id="logo" src="~/assets/images/logo.png" class="logo" alt="Logo" width="80" height="80" />
             <NuxtLink v-if="store.token == ''" to="/auth">
                 <button class="login-button">
                     Login
@@ -25,6 +26,7 @@ useSeoMeta({
 <style scoped>
 .wrapper {
     margin-top: 60px;
+    padding: 0 10px;
 }
 
 .content {
