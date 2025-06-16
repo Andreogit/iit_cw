@@ -11,8 +11,5 @@ RUN npm install
 # Копіюємо весь проєкт
 COPY . .
 
-# Перезбираємо sqlite3 для правильної архітектури
-RUN npm rebuild sqlite3
-
 EXPOSE 5000
 CMD ["node", "index.js"]

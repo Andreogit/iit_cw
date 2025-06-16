@@ -11,10 +11,10 @@ const app = express();
 const SECRET_KEY = 'secret_key';
 
 const db = new Pool({
-  host: 'database-1.c74ws6kw0ai6.eu-north-1.rds.amazonaws.com',
+  host: 'database.c74ws6kw0ai6.eu-north-1.rds.amazonaws.com',
   user: 'db_admin',
   password: 'master_password',
-  database: 'database-1',
+  database: 'database',
   port: 5432,
 });
 
