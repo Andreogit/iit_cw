@@ -48,9 +48,8 @@ const handleAddStudent = async () => {
         const response = await addStudent(newStudent.value);
         newStudent.value = { id: 0, name: '', age: 0, grade: 0 };
         console.log(response);
-        if (response.status == 200 || response.status == 201) {
-            await loadStudents();
-        } else {
+        loadStudents();
+        if (!(response.status == 200 || response.status == 201)) {
             error.value = response.data?.error ?? 'Unknown error';
         }
     }
