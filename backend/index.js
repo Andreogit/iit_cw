@@ -5,6 +5,7 @@ const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
 const cors = require('cors');
 const { Pool } = require('pg');
+const fs = require('fs');
 
 const PORT = process.env.PORT || 5000;
 const app = express();
@@ -16,6 +17,10 @@ const db = new Pool({
   password: 'master_password',
   database: 'database',
   port: 5432,
+  ssl: {
+    rejectUnauthorized: true,
+    ca: fs.readFileSync(__dirname + '/certs/global-bundle.pem').toString(),
+  },
 });
 
 db.connect()

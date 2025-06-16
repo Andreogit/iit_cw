@@ -11,5 +11,8 @@ RUN npm install
 # Копіюємо весь проєкт
 COPY . .
 
+# Копіюємо сертифікат у контейнер
+COPY certs/global-bundle.pem ./certs/global-bundle.pem
+
 EXPOSE 5000
 CMD ["node", "index.js"]
