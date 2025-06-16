@@ -12,10 +12,10 @@ const app = express();
 const SECRET_KEY = 'secret_key';
 
 const db = new Pool({
-  host: 'database.c74ws6kw0ai6.eu-north-1.rds.amazonaws.com',
+  host: 'database-1.c74ws6kw0ai6.eu-north-1.rds.amazonaws.com',
   user: 'db_admin',
   password: 'master_password',
-  database: 'database',
+  database: 'students',
   port: 5432,
   ssl: {
     rejectUnauthorized: true,
