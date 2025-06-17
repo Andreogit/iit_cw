@@ -7,7 +7,7 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     public: {
-      baseURL: process.env.baseURL ?? process.env.NUXT_baseURL ?? 'http://localhost:5000'
+      baseURL: process.env.baseURL ?? process.env.NUXT_PUBLIC_baseURL ?? 'http://localhost:5000'
     }
   },
 

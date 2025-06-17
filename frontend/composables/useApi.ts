@@ -7,6 +7,8 @@ import type { User } from '~/models/user';
 export const useApi = () => {
   const config = useRuntimeConfig()
   console.log(config.public);
+  console.log(process.env.baseURL);
+  console.log(process.env.NUXT_PUBLIC_baseURL);
   let isRefreshing = false;
   const baseURL = config.public.baseURL as string ?? process.env.baseURL ?? 'http://13.61.146.121:5000'
 
