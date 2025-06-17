@@ -2,12 +2,12 @@
 export default defineNuxtConfig({
   ssr: true,
   compatibilityDate: '2024-11-01',
-  devtools: { enabled: true },
+  devtools: { enabled: false },
   router:{},
 
   runtimeConfig: {
     public: {
-      baseURL: process.env.baseURL ?? process.env.NUXT_PUBLIC_baseURL ?? 'http://localhost:5000'
+      baseURL: process.env.BASE_URL ?? process.env.NUXT_PUBLIC_BASE_URL ?? 'http://localhost:5000'
     }
   },
 

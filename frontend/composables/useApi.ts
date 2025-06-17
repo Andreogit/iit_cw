@@ -7,10 +7,11 @@ import type { User } from '~/models/user';
 export const useApi = () => {
   const config = useRuntimeConfig()
   console.log(config.public);
-  console.log(process.env.baseURL);
-  console.log(process.env.NUXT_PUBLIC_baseURL);
+  console.log('runtimeConfig.public.baseURL:', config.public.baseURL)
+  console.log(process.env.BASE_URL);
+  console.log(process.env.NUXT_PUBLIC_BASE_URL);
   let isRefreshing = false;
-  const baseURL = config.public.baseURL as string ?? process.env.baseURL ?? 'http://13.61.146.121:5000'
+  const baseURL = config.public.baseURL ?? process.env.BASE_URL ?? ''
 
   const api = axios.create({
     baseURL,
