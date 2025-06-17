@@ -6,6 +6,7 @@ import type { User } from '~/models/user';
 
 export const useApi = () => {
   const config = useRuntimeConfig()
+  console.log(config.public);
   let isRefreshing = false;
   const baseURL = config.public.baseURL as string ?? process.env.baseURL ?? 'http://13.61.146.121:5000'
 
