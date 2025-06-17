@@ -5,9 +5,9 @@ import type { User } from '~/models/user';
 
 
 export const useApi = () => {
-
+  const config = useRuntimeConfig()
   let isRefreshing = false;
-  const baseURL = process.env.baseURL ?? 'http://13.61.146.121:5000'
+  const baseURL = config.public.baseURL as string ?? process.env.baseURL ?? 'http://13.61.146.121:5000'
 
   const api = axios.create({
     baseURL,

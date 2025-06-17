@@ -5,6 +5,12 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   router:{},
 
+  runtimeConfig: {
+    public: {
+      baseURL: process.env.baseURL ?? 'http://13.61.146.121:5000'
+    }
+  },
+
   image: {
     dir: 'assets/images'
   },
