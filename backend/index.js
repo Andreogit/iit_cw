@@ -28,7 +28,10 @@ db.connect()
   .catch(err => console.error('Connection error', err.stack));
 
 // Middleware
-app.use(cors());
+app.use(cors({
+  origin: 'http://16.171.152.197:3000',
+  credentials: true,
+}));
 app.use(express.json());
 
 // Database Setup
