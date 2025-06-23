@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const path = require('path');
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
-// const cors = require('cors');
+const cors = require('cors');
 const { Pool } = require('pg');
 const fs = require('fs');
 
@@ -28,10 +28,7 @@ db.connect()
   .catch(err => console.error('Connection error', err.stack));
 
 // Middleware
-// app.use(cors({
-//   origin: 'http://16.171.152.197:3000',
-//   credentials: true,
-// }));
+app.use(cors({}));
 app.use(express.json());
 
 // Database Setup
