@@ -6,6 +6,10 @@ import type { User } from '~/models/user';
 
 export const useApi = () => {
   const config = useRuntimeConfig()
+  console.log(config.public);
+  console.log('runtimeConfig.public.baseURL:', config.public.baseURL)
+  console.log(process.env.BASE_URL);
+  console.log(process.env.NUXT_PUBLIC_BASE_URL);
   let isRefreshing = false;
   const baseURL = config.public.baseURL ?? process.env.BASE_URL ?? '16.171.152.197'
 
